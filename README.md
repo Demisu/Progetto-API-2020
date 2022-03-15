@@ -1,5 +1,5 @@
 # Progetto-API-2020
-Progetto algoritmi e strutture dati PoliMi 2020/21
+Progetto di algoritmi e strutture dati PoliMi 2020/21
 
 --------------------------------------------------------------------------------------
 Codice contenuto nel file Codice.c
