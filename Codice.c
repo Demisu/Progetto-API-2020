@@ -1,11 +1,7 @@
-//Scheletro progetto API
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
-//#define MAXCOMMAND 5 //lunghezza TopK + 1
-//#define AGGIUNGIGRAFO "Aggi"
-//#define TOPK "TopK"
 #define KLIMIT 100000 //100k max valore con array
 #define ALLINVAL 13
 
