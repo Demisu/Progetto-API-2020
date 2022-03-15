@@ -75,12 +75,7 @@ int main(){
 			//Allinea alla prossima riga
 			tempInt = 0;
 			while(tempInt < ALLINVAL){
-				//new
 				allineamento = getchar_unlocked();
-
-				//old
-				//if(!scanf("%c", &allineamento)){}
-
 				tempInt++;
 			}
 
@@ -119,7 +114,7 @@ int main(){
 
 void aggiungiGrafo(nodoClassifica *ptrTesta){
 	//Stato nodo: 0 = da ottimizzare, 1 = ottimizzato
-	unsigned int totCammino = 0, distanzaMin[nNodi], /*precedente[dim],*/ tempMin, tempIndex, percAlt;
+	unsigned int totCammino = 0, distanzaMin[nNodi], tempMin, tempIndex, percAlt;
 	int i, j = 0, statoNodo[nNodi];	//Lettura matrice di adiacenza
 	for(i = 0; i < nNodi; i++){
 		scanVeloce(matriceAdiacenza+i*nNodi);
@@ -187,7 +182,6 @@ void aggiungiGrafo(nodoClassifica *ptrTesta){
 }
 
 void topK(nodoClassifica *ptrTesta){
-	//new
 	int i;
 	nodoClassifica * ptrTemp = ptrTesta;
 	//salta primo elem
@@ -273,7 +267,6 @@ void inserisciClassifica(nodoClassifica *ptrTesta, int indiceNuovo, unsigned int
 
 	//Controllo su ultimo della lista
 	if(punteggioNuovo < ptrTemp->punteggioGrafo){
-		//printf("controllo extra su ultimo\n");
 		//Aggiunto davanti a ptrTemp ma dopo il precedente
 		if(ptrTemp == ptrTesta){
 			//Aggiunto in testa
@@ -292,7 +285,7 @@ void inserisciClassifica(nodoClassifica *ptrTesta, int indiceNuovo, unsigned int
 
 void aggiungiGrafoALT(classifica * classificaGrafi){
 	//Stato nodo: 0 = da ottimizzare, 1 = ottimizzato
-	unsigned int totCammino = 0, distanzaMin[nNodi], /*precedente[dim],*/ tempMin, tempIndex, percAlt, percorsoTotPeggiore;
+	unsigned int totCammino = 0, distanzaMin[nNodi], tempMin, tempIndex, percAlt, percorsoTotPeggiore;
 	int i, j = 0, statoNodo[nNodi], indicePeggiore;	//Lettura matrice di adiacenza
 	matriceAdiacenza = (unsigned int *)malloc(nNodi*nNodi*sizeof(unsigned int));
 	for(i = 0; i < nNodi; i++){
